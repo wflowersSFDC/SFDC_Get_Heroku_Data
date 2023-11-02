@@ -7,7 +7,7 @@ public with sharing class GetHerokuData {
         
         // Prepare the HTTP request
         HttpRequest req = new HttpRequest();
-        req.setEndpoint('callout:Heroku/' + request.endpoint); //Endpoint must be provided by the flow
+        req.setEndpoint('callout:Heroku/' + request.endpoint); //Named Credential must be named 'Heroku', otherwise change 'callout:Heroku' to your Named Credential's name
         req.setMethod('GET');
         req.setTimeout(120000); // Set timeout to 2 minutes just in case
         
