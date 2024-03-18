@@ -1,18 +1,18 @@
-# Salesforce DX Project: Next Steps
+# SFDC Get Heroku Data Apex Class
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+# Rough instructions for connecting your org to the mock Heroku service
 
-## How Do You Plan to Deploy Your Changes?
+## 1. Create External Service
+  Create Principal - Can be named anything
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## 2. Create Named Credential
+  Named Credential **MUST BE** named "Heroku"
+  URL should be "https://node-testapi-758688dae406.herokuapp.com"
+  Assign the External Credential that you created prior to this Named Credential
 
-## Configure Your Salesforce DX Project
+## 3. Create Permission Set
+  Create a Permission Set
+  Add the External Credential you created earlier to External Credential Principal Access
+  Assign the Permission Set to any user that needs access
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+## 4. (Optional) Add the Apex Class from this repo to your org if you would like to use the Apex callout rather than Flow
