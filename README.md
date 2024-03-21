@@ -2,7 +2,7 @@
 
 # Rough instructions for connecting your org to the mock Heroku service
 
-## 1. Create External Service
+## 1. Create External Credential
   Create Principal - Can be named anything
 
 ## 2. Create Named Credential Name "Heroku"
